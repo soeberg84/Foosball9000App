@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:view="clr-namespace:Foosball9000App.View;assembly=Foosball9000App"
              x:Class="Foosball9000App.View.MainPageView">
-  <view:LeaderBoardView Title="Leaderbpard"/>
+  <view:LeaderBoardView Title="Leaderboard"/>
   <view:StartMatchView Title="Start match"/>
 </TabbedPage>
