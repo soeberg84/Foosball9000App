@@ -13,6 +13,12 @@ namespace Foosball9000App.View
         public StartMatchView()
         {
             InitializeComponent();
+            BindingContext = new StartMatchViewModel();
+        }
+
+        private void StartMatchView_OnAppearing(object sender, EventArgs e)
+        {
+            ((StartMatchViewModel) BindingContext).LoadDataAsync();
         }
     }
 }
