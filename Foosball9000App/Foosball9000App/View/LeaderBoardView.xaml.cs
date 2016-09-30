@@ -13,6 +13,13 @@ namespace Foosball9000App.View
         public LeaderBoardView()
         {
             InitializeComponent();
+            BindingContext = new LeaderBoardViewModel();
+            Appearing +=OnAppearing;
+        }
+
+        private void OnAppearing(object sender, EventArgs eventArgs)
+        {
+            ((LeaderBoardViewModel)BindingContext).LoadDataAsync();
         }
     }
 }
