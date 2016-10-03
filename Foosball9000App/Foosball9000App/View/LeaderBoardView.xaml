@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Foosball9000App.View.LeaderBoardView">
+    <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
   <StackLayout>
     <ActivityIndicator x:Name="BusyIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
     <ListView ItemsSource="{Binding Players}">
@@ -21,4 +24,7 @@
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Name="RefreshButton" Clicked="RefreshButton_Clicked" Text="Refresh" Order="Secondary" Priority="0"/>
+  </ContentPage.ToolbarItems>
 </ContentPage>

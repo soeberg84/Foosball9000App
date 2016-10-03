@@ -21,5 +21,10 @@ namespace Foosball9000App.View
         {
             ((LeaderBoardViewModel)BindingContext).LoadDataAsync();
         }
+
+        private void RefreshButton_Clicked(object sender, EventArgs e)
+        {
+            ((LeaderBoardViewModel)BindingContext).LoadDataAsync();
+        }
     }
 }
