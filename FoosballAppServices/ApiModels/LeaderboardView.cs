@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FoosballAppServices.Models
+namespace FoosballAppServices.ApiModels
 {
     public class LeaderboardView
     {

@@ -35,17 +35,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FoosballServices.cs" />
-    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="BaseModel.cs" />
     <Compile Include="Models\LeaderBoardPlayer.cs" />
-    <Compile Include="Models\LeaderboardView.cs" />
-    <Compile Include="Models\LeaderboardViewEntry.cs" />
-    <Compile Include="Models\Match.cs" />
-    <Compile Include="Models\MatchResult.cs" />
+    <Compile Include="ApiModels\LeaderboardView.cs" />
+    <Compile Include="ApiModels\LeaderboardViewEntry.cs" />
+    <Compile Include="ApiModels\Match.cs" />
+    <Compile Include="ApiModels\MatchResult.cs" />
     <Compile Include="Models\MatchupPlayer.cs" />
-    <Compile Include="Models\MatchupResult.cs" />
-    <Compile Include="Models\PartnerPercentResult.cs" />
-    <Compile Include="Models\Season.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="ApiModels\MatchupResult.cs" />
+    <Compile Include="ApiModels\PartnerPercentResult.cs" />
+    <Compile Include="ApiModels\Season.cs" />
+    <Compile Include="ApiModels\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

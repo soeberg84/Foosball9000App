@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FoosballAppServices.Models
+namespace FoosballAppServices.ApiModels
 {
     public class Season
     {

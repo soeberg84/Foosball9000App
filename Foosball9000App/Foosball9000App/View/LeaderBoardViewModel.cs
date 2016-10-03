@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using FoosballAppServices;
+using FoosballAppServices.ApiModels;
 using FoosballAppServices.Models;
 
 namespace Foosball9000App.View
@@ -11,6 +12,7 @@ namespace Foosball9000App.View
 
         public LeaderBoardViewModel()
         {
+            IsBusy = true;
             service = new FoosballServices();
             Players = new ObservableCollection<LeaderBoardPlayer>();
         }
@@ -26,7 +28,9 @@ namespace Foosball9000App.View
         {
             var players = await service.GetLeaderBoardPlayers();
            Players = new ObservableCollection<LeaderBoardPlayer>(players);
-           
+            IsBusy = false;
+
+
         }
     }
 }

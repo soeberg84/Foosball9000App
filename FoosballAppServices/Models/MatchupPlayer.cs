@@ -1,6 +1,6 @@
 ﻿namespace FoosballAppServices.Models
 {
-    public class MatchupPlayer
+    public class MatchupPlayer : BaseModel
     {
         public bool IsSelected { get; set; }
     }

@@ -3,15 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Foosball9000App.View.LeaderBoardView">
   <StackLayout>
-    <Label Text="Hello start match!" VerticalOptions="Center" HorizontalOptions="Center" />
+    <ActivityIndicator x:Name="BusyIndicator" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
     <ListView ItemsSource="{Binding Players}">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <StackLayout Orientation="Horizontal">
-              <Label Text="{Binding Rank}" />
-              <Label Text="{Binding Name}" />
-            </StackLayout>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+              <Label Grid.Column="0" Text="{Binding Rank}" />
+              <Label Grid.Column="1" Text="{Binding User.Username}" />
+            </Grid>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
