@@ -11,7 +11,7 @@ namespace Foosball9000App
     {
         public App()
         {
-            MainPage = new MainPageView()
+            MainPage = new MainPageView
             {
                 BindingContext = new MainPageViewModel()
             };

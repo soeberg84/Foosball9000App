@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using Foosball9000App.Viewmodels;
 
 namespace Foosball9000App.View
 {
@@ -14,9 +10,11 @@ namespace Foosball9000App.View
         {
             LeaderBoardViewModel = new LeaderBoardViewModel();
             StartMatchViewModel = new StartMatchViewModel();
+            LoginViewModel = new LoginViewModel();
         }
         public LeaderBoardViewModel LeaderBoardViewModel { get; set; }
         public StartMatchViewModel StartMatchViewModel { get; set; }
+        public LoginViewModel LoginViewModel { get; set; }
     }
 
     public abstract class BaseViewModel : INotifyPropertyChanged

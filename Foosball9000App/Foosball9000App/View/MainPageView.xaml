@@ -5,4 +5,5 @@
              x:Class="Foosball9000App.View.MainPageView">
   <view:LeaderBoardView Title="Leaderboard"/>
   <view:StartMatchView Title="Start match"/>
+  <view:LoginView Title="LoginView" />
 </TabbedPage>
