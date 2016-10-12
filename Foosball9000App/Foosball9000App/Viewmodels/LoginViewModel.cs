@@ -11,10 +11,27 @@ namespace Foosball9000App.Viewmodels
             IsBusy = false;
         }
 
-        public string Username { get; set; }
-        public string Password { get; set; }
+        private string _username;
+        public string Username
+        {
+            get { return _username; }
+            set
+            {
+                _username = value;
+                RaisePropertyChanged();
+            }
+        }
 
-        public bool IsBusy { get; set; }
+        private string _password;
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                _password = value;
+                RaisePropertyChanged();
+            }
+        }
 
         public ICommand LoginCommand
         {
@@ -22,11 +39,10 @@ namespace Foosball9000App.Viewmodels
             {
                 return new Command(async () =>
                 {
-                    IsBusy = true;
+                    IsBusy = false;
 
-                    Username = "success";
+                
                 });
-
             }
         }
     }
