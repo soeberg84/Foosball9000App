@@ -19,6 +19,17 @@ namespace Foosball9000App.View
 
     public abstract class BaseViewModel : INotifyPropertyChanged
     {
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisePropertyChanged();
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)

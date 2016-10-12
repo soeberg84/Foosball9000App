@@ -4,20 +4,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Foosball9000App.View.StartMatchView"
              Appearing="StartMatchView_OnAppearing">
-    <StackLayout>
-        <Label Text="Hello start match!" VerticalOptions="Center" HorizontalOptions="Center" />
-        <ListView ItemsSource="{Binding Players}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{Binding Name}" />
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+  <StackLayout>
+    <Label Text="Hello start match!" VerticalOptions="Center" HorizontalOptions="Center" />
+    <ListView ItemsSource="{Binding Players}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+               <Label Text="{Binding Name}" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
 </ContentPage>

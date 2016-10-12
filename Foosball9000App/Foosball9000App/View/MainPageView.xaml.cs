@@ -12,7 +12,6 @@ namespace Foosball9000App.View
     {
         public MainPageView()
         {
-            
             InitializeComponent();
         }
     }
